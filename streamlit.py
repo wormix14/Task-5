@@ -19,9 +19,6 @@ mines = df.drop(columns=["Date"])
 
 st.sidebar.header("Anomaly Test Parameters")
 
-if st.sidebar.button("Refresh Data"):
-    st.rerun()
-
 k_val = st.sidebar.slider("IQR multiplier (k)", min_value=0.1, max_value=3.0, value=1.5, step=0.1)
 z_threshold = st.sidebar.slider("Z-score threshold", min_value=0.5, max_value=4.0, value=2.0, step=0.1)
 ma_window = st.sidebar.slider("Moving average window (days)", min_value=2, max_value=15, value=5, step=1)
